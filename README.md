@@ -1,25 +1,159 @@
 # Conversational AI Entities
 
-## 🤖 Introduction
-This is a collection of Entitites for building CAI (Conversational AI) Virtual Assistants, either demos or MVPs.
-Some of the initial files will be taken from other GitHub repositories and those will be documented here.
+A growing collection of reusable entity sets for building Conversational AI virtual assistants, demos, prototypes, and MVPs.
 
-Since every platform seems to use a different data format, these will be initally formatted as csv files.
+The goal is to maintain practical entity data that can be reused across platforms rather than rebuilding common lists for every project.
 
-Right now, columns will be:
-1. Keyphrase/Entity
-2. Slot/Tags
-3. Synonyms
-4. Notes
+## Project Status
 
-I hope to script tools to convert those CSV files into various other formats for other platforms. 
-I'd also like to review [Cognigy's format for the Data column in Lexicons](https://docs.cognigy.com/ai/resources/build/lexicons/#format) to see if it is relevant at this time.
+**Active**
 
-## Current Sets
- - Aviation/AirportCodes.csv has 3500+ entries. Needs to be checked for duplicates
- - Insurance/InsuranceTypes.csv has 19 taken from the State Farm website. The synonyms could be improved.
- - eCommerce/PaymentTypes.csv has 14 entries built from various web searching.
+New entity sets will be added over time, and existing sets may be expanded, cleaned up, or normalized as they are reused in projects.
 
-## Planned Sets
-- Automotive Makes
-- Food Items
+## Data Format
+
+Entity sets are currently stored as CSV files so they remain simple to inspect, edit, and convert.
+
+The intended columns are:
+
+1. **Keyphrase / Entity**
+2. **Slot / Tags**
+3. **Synonyms**
+4. **Notes**
+
+Example:
+
+```csv
+Homeowners insurance,insurance_type,Homeowners,
+```
+
+Some entries may contain multiple tags or multiple synonyms.
+
+Platform-specific conversion tools may be added later for systems that use different entity, lexicon, or slot formats.
+
+## Current Entity Sets
+
+### Aviation
+
+**`Aviation/AirportCodes.csv`**
+
+Contains more than 3,500 airport codes with associated city/location information.
+
+Current follow-up work:
+
+- Check for duplicate entries
+- Review and normalize data where useful
+- Potentially expand beyond the current dataset
+
+Source and dataset notes are documented in:
+
+`Aviation/AirportCodes.md`
+
+### Insurance
+
+**`Insurance/insuranceTypes.csv`**
+
+Contains common insurance product types and synonyms, including:
+
+- Homeowners insurance
+- Renters insurance
+- Auto insurance
+- Motorcycle insurance
+- Life insurance
+- Health insurance
+- Pet insurance
+- Businessowners insurance
+
+The current dataset contains 18 entity entries.
+
+Additional synonym expansion would make this set more useful for natural-language matching.
+
+Source and dataset notes are documented in:
+
+`Insurance/InsuranceTypes.md`
+
+### eCommerce
+
+**`eCommerce/PaymentMethods.csv`**
+
+Contains 14 payment-method entities and associated synonyms.
+
+The dataset distinguishes between:
+
+- `payment_method`
+- `accepted_payment_method`
+
+This allows a conversational application to identify a requested payment method independently from whether that method is accepted by a particular site or service.
+
+Examples include:
+
+- PayPal
+- Credit Card
+- Gift Card
+- Electronic Funds Transfer
+- Buy Now Pay Later
+- Cryptocurrency
+- Cash on Delivery
+
+Dataset notes are documented in:
+
+`eCommerce/PaymentMethods.md`
+
+## Planned and Candidate Entity Sets
+
+Some likely additions include:
+
+- Automotive makes
+- Automotive models
+- Vehicle service types
+- Food items
+- Restaurant cuisines
+- Shipping carriers
+- Shipping service levels
+- Retail product categories
+- Banking transaction types
+- Account types
+- Hotel amenities
+- Travel classes
+- Appointment types
+- IT support issue categories
+- Device types
+- Operating systems
+- Cloud platforms
+- Programming languages
+
+The exact list will evolve as useful conversational use cases come up.
+
+## Design Goals
+
+Entity sets in this repository should generally be:
+
+- Reusable across multiple conversational applications
+- Easy to read and edit manually
+- Useful for demos as well as prototypes
+- Broad enough to recognize common user phrasing
+- Explicit about synonyms and alternate terminology
+- Documented when data comes from an external source
+
+## Future Work
+
+Potential future improvements include:
+
+- CSV validation and consistency checking
+- Duplicate detection
+- Automated normalization
+- Conversion into platform-specific formats
+- Import/export scripts for common Conversational AI platforms
+- Expanded synonym coverage
+- Dataset-specific tests
+- Schema validation
+
+## Contributing
+
+Suggestions, corrections, additional synonyms, and new entity sets are welcome.
+
+When adding a new dataset, include a short Markdown file alongside the CSV when source attribution, assumptions, or usage notes would be helpful.
+
+## License
+
+See `LICENSE` for licensing information.
