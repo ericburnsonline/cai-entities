@@ -3,7 +3,7 @@
 "BPAY","payment_method","",
 "Buy Now Pay Later","payment_method","Afterpay,LazyPay,zipPay,Openpay,Klarna",
 "Electronic Funds Transfer","payment_method","Bank Transfer,EFT",
-"Digital Payment","payment_method","Samsung Pay,Google Pay,Skrill\,PayU Wallet,Qiwi,PayU,GrabPay,GCash,Cash App,AliPay,Citrus Pay,Zelle,Amazon Pay,Yandex,Mobikiwi,Ewallet,Apple Pay,Venmo,Neteller,eBay Managed Payment,WePay Chat,Paytm,Skrill",
+"Digital Payment","payment_method","Samsung Pay,Google Pay,Skrill,PayU Wallet,Qiwi,PayU,GrabPay,GCash,Cash App,AliPay,Citrus Pay,Zelle,Amazon Pay,Yandex,Mobikiwi,Ewallet,Apple Pay,Venmo,Neteller,eBay Managed Payment,WeChat Pay,Paytm,Skrill",
 "eCheck","payment_method","",
 "Automated Clearing House","payment_method,accepted_payment_method","ACH,online banking payment",
 "Poli","payment_method","POLi Payments",
