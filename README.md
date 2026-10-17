@@ -51,7 +51,7 @@ Source and dataset notes are documented in:
 
 ### Insurance
 
-**`Insurance/insuranceTypes.csv`**
+**`Insurance/InsuranceTypes.csv`**
 
 Contains common insurance product types and synonyms, including:
 
