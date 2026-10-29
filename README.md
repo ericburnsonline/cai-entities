@@ -148,6 +148,19 @@ Potential future improvements include:
 - Dataset-specific tests
 - Schema validation
 
+## Data Quality Checklist
+
+Before adding or updating an entity dataset:
+
+- Check for duplicate keyphrases and conflicting synonyms.
+- Use consistent capitalization, spacing, and naming conventions.
+- Verify that CSV rows follow the documented column structure.
+- Include common spoken variations, abbreviations, and alternate terminology where useful.
+- Document original data sources and any transformations or assumptions in the accompanying Markdown file.
+- Avoid including personal, confidential, or proprietary information.
+
+These checks are currently manual. Automated validation and duplicate detection are planned improvements.
+
 ## Contributing
 
 Suggestions, corrections, additional synonyms, and new entity sets are welcome.
